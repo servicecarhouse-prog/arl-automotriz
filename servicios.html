@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios — ARL Automotriz</title>
+<meta name="description" content="Detalle de los servicios de ARL Automotriz: cambio de aceite, diagnóstico de motor, frenos, suspensión, mantenimiento preventivo, sistema eléctrico y aire acondicionado.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.11.0/dist/tabler-icons.min.css">
+<style>
+  :root { --navy:#0a1a3a; --navy-2:#0f254f; --blue:#1f6fff; --ink:#16181d; --muted:#6b7280; --line:#e6e7ea; --bg:#fff; --surface:#f6f7f8; --wa:#25D366; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); line-height: 1.6; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+  header { position: sticky; top: 0; background: rgba(10,26,58,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); z-index: 50; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+  .nav .logo { height: 40px; width: auto; }
+  .back { color: rgba(255,255,255,0.85); font-size: 14px; display: inline-flex; align-items: center; gap: 6px; }
+  .back:hover { color: #fff; }
+
+  .page-head { background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; padding: 56px 0 50px; text-align: center; }
+  .page-head h1 { font-size: 34px; font-weight: 700; }
+  .page-head p { color: rgba(255,255,255,0.8); margin-top: 8px; }
+
+  .svc-detail { padding: 44px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 80px; }
+  .svc-detail .inner { display: grid; grid-template-columns: 260px 1fr; gap: 30px; align-items: start; }
+  .svc-detail img { width: 100%; height: 190px; object-fit: cover; border-radius: 14px; }
+  .svc-detail .head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .svc-detail .head i { font-size: 30px; color: var(--blue); }
+  .svc-detail h2 { font-size: 24px; font-weight: 700; }
+  .svc-detail p { color: #333; margin-bottom: 14px; }
+  .svc-detail ul { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+  .svc-detail li { display: flex; gap: 9px; color: #444; }
+  .svc-detail li i { color: var(--blue); margin-top: 4px; flex-shrink: 0; }
+  .btn-wa { display: inline-flex; align-items: center; gap: 8px; background: var(--wa); color: #fff; padding: 12px 22px; border-radius: 10px; font-size: 14px; font-weight: 600; }
+  @media (max-width: 640px) { .svc-detail .inner { grid-template-columns: 1fr; } .svc-detail img { height: 200px; } }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 30px 0; text-align: center; font-size: 13px; }
+  .float-wa { position: fixed; bottom: 22px; right: 22px; width: 58px; height: 58px; border-radius: 50%; background: var(--wa); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); z-index: 60; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html"><img class="logo" src="logo-web.png" alt="ARL Automotriz"></a>
+    <a class="back" href="index.html"><i class="ti ti-arrow-left"></i> Volver al inicio</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>Nuestros servicios</h1>
+    <p>Conoce a detalle cómo cuidamos tu vehículo</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="svc-detail" id="aceite"><div class="inner">
+    <img src="svc-aceite.jpg" alt="Cambio de aceite">
+    <div>
+      <div class="head"><i class="ti ti-droplet"></i><h2>Cambio de aceite</h2></div>
+      <p>El cambio de aceite periódico es la base para alargar la vida de tu motor. Usamos aceites de la viscosidad recomendada por el fabricante y reemplazamos los filtros para mantener la lubricación y limpieza interna del motor.</p>
+      <ul>
+        <li><i class="ti ti-check"></i>Aceite mineral, semisintético o sintético según tu vehículo</li>
+        <li><i class="ti ti-check"></i>Cambio de filtro de aceite</li>
+        <li><i class="ti ti-check"></i>Revisión de niveles (refrigerante, frenos, dirección)</li>
+        <li><i class="ti ti-check"></i>Reporte del estado general del motor</li>
+      </ul>
+      <a class="btn-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz,%20quiero%20información%20sobre%20el%20cambio%20de%20aceite" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar por WhatsApp</a>
+    </div>
+  </div></section>
+
+  <section class="svc-detail" id="diagnostico"><div class="inner">
+    <img src="svc-diagnostico.jpg" alt="Diagnóstico de motor">
+    <div>
+      <div class="head"><i class="ti ti-cpu"></i><h2>Diagnóstico de motor</h2></div>
+      <p>Con escáner electrónico leemos los códigos de falla de la computadora de tu vehículo para identificar el problema con precisión, sin adivinanzas. Te explicamos a detalle qué encontramos y la solución recomendada.</p>
+      <ul>
+        <li><i class="ti ti-check"></i>Escaneo electrónico de la ECU</li>
+        <li><i class="ti ti-check"></i>Lectura y borrado de códigos de falla</li>
+        <li><i class="ti ti-check"></i>Diagnóstico de luz de check engine</li>
+        <li><i class="ti ti-check"></i>Informe claro con presupuesto antes de reparar</li>
+      </ul>
+      <a class="btn-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz,%20quiero%20un%20diagnóstico%20de%20motor" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar por WhatsApp</a>
+    </div>
+  </div></section>
+
+  <section class="svc-detail" id="frenos"><div class="inner">
+    <img src="svc-frenos.jpg" alt="Frenos">
+    <div>
+      <div class="head"><i class="ti ti-circle-half-vertical"></i><h2>Frenos</h2></div>
+      <p>Tu seguridad depende del sistema de frenos. Revisamos y reemplazamos los componentes desgastados para que tu vehículo frene de forma firme y segura en todo momento.</p>
+      <ul>
+        <li><i class="ti ti-check"></i>Cambio de pastillas y zapatas</li>
+        <li><i class="ti ti-check"></i>Rectificado o cambio de discos y tambores</li>
+        <li><i class="ti ti-check"></i>Purga y cambio de líquido de frenos</li>
+        <li><i class="ti ti-check"></i>Revisión del sistema ABS</li>
+      </ul>
+      <a class="btn-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz,%20quiero%20información%20sobre%20el%20servicio%20de%20frenos" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar por WhatsApp</a>
+    </div>
+  </div></section>
+
+  <section class="svc-detail" id="suspension"><div class="inner">
+    <img src="svc-frenos.jpg" alt="Suspensión">
+    <div>
+      <div class="head"><i class="ti ti-car-suv"></i><h2>Suspensión</h2></div>
+      <p>Una suspensión en buen estado mejora el confort, la estabilidad y protege otros componentes del vehículo. Diagnosticamos ruidos, vibraciones y desgaste irregular de llantas.</p>
+      <ul>
+        <li><i class="ti ti-check"></i>Cambio de amortiguadores</li>
+        <li><i class="ti ti-check"></i>Rótulas, terminales y bujes</li>
+        <li><i class="ti ti-check"></i>Resortes y bieletas</li>
+        <li><i class="ti ti-check"></i>Revisión de dirección y alineación</li>
+      </ul>
+      <a class="btn-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz,%20quiero%20información%20sobre%20el%20servicio%20de%20suspensión" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar por WhatsApp</a>
+    </div>
+  </div></section>
+
+  <section class="svc-detail" id="preventivo"><div class="inner">
+    <img src="svc-mantenimiento.jpg" alt="Mantenimiento preventivo">
+    <div>
+      <div class="head"><i class="ti ti-tools"></i><h2>Mantenimiento preventivo</h2></div>
+      <p>Prevenir es más económico que reparar. Con un mantenimiento programado evitamos fallas mayores y mantenemos tu vehículo confiable y seguro. Consulta nuestra promoción de mantenimiento preventivo completo desde S/ 550.</p>
+      <ul>
+        <li><i class="ti ti-check"></i>Cambio de aceite y filtros</li>
+        <li><i class="ti ti-check"></i>Filtro de cabina y afinamiento básico</li>
+        <li><i class="ti ti-check"></i>Revisión de frenos, suspensión y niveles</li>
+        <li><i class="ti ti-check"></i>Inspección de 360° con reporte</li>
+      </ul>
+      <a class="btn-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz,%20quiero%20la%20promoción%20de%20mantenimiento%20preventivo%20a%20S/550" target="_blank"><i class="ti ti-brand-whatsapp"></i> Reservar promoción</a>
+    </div>
+  </div></section>
+
+  <section class="svc-detail" id="electrico"><div class="inner">
+    <img src="svc-electrico.jpg" alt="Sistema eléctrico">
+    <div>
+      <div class="head"><i class="ti ti-bolt"></i><h2>Sistema eléctrico</h2></div>
+      <p>Diagnosticamos y reparamos fallas eléctricas y de electrónica automotriz con multitester y equipos especializados, desde la batería hasta sensores y cableado.</p>
+      <ul>
+        <li><i class="ti ti-check"></i>Revisión de batería y alternador</li>
+        <li><i class="ti ti-check"></i>Sistema de arranque y carga</li>
+        <li><i class="ti ti-check"></i>Sensores, luces e instalaciones</li>
+        <li><i class="ti ti-check"></i>Diagnóstico con multitester</li>
+      </ul>
+      <a class="btn-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz,%20quiero%20revisar%20el%20sistema%20eléctrico" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar por WhatsApp</a>
+    </div>
+  </div></section>
+
+  <section class="svc-detail" id="aire"><div class="inner">
+    <img src="svc-aire.jpg" alt="Aire acondicionado">
+    <div>
+      <div class="head"><i class="ti ti-snowflake"></i><h2>Aire acondicionado</h2></div>
+      <p>Mantén tu vehículo fresco y con aire limpio. Revisamos fugas, recargamos el gas refrigerante y reparamos el sistema completo de climatización.</p>
+      <ul>
+        <li><i class="ti ti-check"></i>Carga de gas refrigerante</li>
+        <li><i class="ti ti-check"></i>Detección y reparación de fugas</li>
+        <li><i class="ti ti-check"></i>Cambio de filtro de cabina</li>
+        <li><i class="ti ti-check"></i>Revisión de compresor y ventilación</li>
+      </ul>
+      <a class="btn-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz,%20quiero%20información%20sobre%20el%20aire%20acondicionado" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar por WhatsApp</a>
+    </div>
+  </div></section>
+
+</div>
+
+<footer>
+  <div class="wrap">© 2026 ARL Automotriz · Jr Doña Delmira 280, Lima, Perú · 997 470 074</div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz,%20quiero%20una%20cotización" target="_blank" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+
+</body>
+</html>
