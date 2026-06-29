@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Problemas comunes por modelo — ARL Automotriz</title>
-<meta name="description" content="Fallas frecuentes por modelo: Audi A4, Volkswagen, BMW, Nissan CVT, Toyota, Hyundai, Kia y más. ARL Automotriz en Lima diagnostica y repara.">
+<meta name="description" content="Fallas frecuentes por modelo y año (2012+): BMW, Mercedes-Benz, Volkswagen, Audi, Peugeot, Renault y Volvo. ARL Automotriz en Lima diagnostica y repara.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.11.0/dist/tabler-icons.min.css">
 <style>
@@ -13,7 +13,7 @@
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); line-height: 1.6; }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
   header { position: sticky; top: 0; background: rgba(10,26,58,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); z-index: 50; }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
   .nav .logo { height: 40px; }
@@ -21,19 +21,24 @@
   .back:hover { color: #fff; }
   .page-head { background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; padding: 56px 0 50px; text-align: center; }
   .page-head h1 { font-size: 32px; font-weight: 700; }
-  .page-head p { color: rgba(255,255,255,0.8); margin-top: 8px; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .page-head p { color: rgba(255,255,255,0.8); margin-top: 8px; max-width: 660px; margin-left: auto; margin-right: auto; }
   .intro { padding: 26px 0 0; color: var(--muted); font-size: 14px; }
-  .grp { padding: 30px 0 10px; }
-  .grp > h2 { font-size: 22px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 0 4px; }
+  .toc a { font-size: 13px; font-weight: 600; color: var(--blue); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; }
+  .toc a:hover { border-color: var(--blue); }
+  .grp { padding: 30px 0 6px; scroll-margin-top: 80px; }
+  .grp > h2 { font-size: 22px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
   .grp > h2 i { color: var(--blue); }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
-  .card { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
-  .card .model { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
-  .card .engine { font-size: 12px; color: var(--blue); font-weight: 600; margin-bottom: 10px; }
+  .grp .lead { color: var(--muted); font-size: 13px; margin: 8px 0 16px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
+  .card { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  .card .model { font-size: 16px; font-weight: 700; }
+  .card .yr { font-size: 12px; color: var(--blue); font-weight: 600; margin-bottom: 9px; }
   .card ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-  .card li { display: flex; gap: 8px; font-size: 14px; color: #444; }
-  .card li i { color: var(--blue); margin-top: 4px; flex-shrink: 0; font-size: 14px; }
-  .cta { background: var(--surface); padding: 40px 0; text-align: center; margin-top: 20px; }
+  .card li { display: flex; gap: 8px; font-size: 13.5px; color: #444; }
+  .card li i { color: var(--blue); margin-top: 4px; flex-shrink: 0; font-size: 13px; }
+  .soon { border: 1px dashed var(--line); border-radius: 14px; padding: 16px 18px; color: var(--muted); font-size: 14px; }
+  .cta { background: var(--surface); padding: 40px 0; text-align: center; margin-top: 24px; }
   .cta h2 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
   .cta p { color: var(--muted); margin-bottom: 18px; }
   .btn-wa { display: inline-flex; align-items: center; gap: 8px; background: var(--wa); color: #fff; padding: 13px 24px; border-radius: 10px; font-size: 15px; font-weight: 600; }
@@ -54,152 +59,157 @@
 <div class="page-head">
   <div class="wrap">
     <h1>Problemas comunes por modelo</h1>
-    <p>Cada modelo tiene fallas típicas según su motor y tecnología. Estas son las que vemos con más frecuencia y sabemos resolver.</p>
+    <p>Encuentra tu vehículo y las fallas que suele presentar según su motor y año. Si reconoces alguna, escríbenos: la diagnosticamos y reparamos.</p>
   </div>
 </div>
 
 <div class="wrap">
-  <p class="intro">Guía referencial basada en fallas frecuentes reportadas. El diagnóstico definitivo siempre se confirma con escáner e inspección directa de tu vehículo.</p>
+  <p class="intro">Información referencial basada en fallas frecuentes reportadas para modelos del 2012 en adelante. Cada unidad es distinta; el diagnóstico definitivo se realiza en el taller con escáner e inspección directa.</p>
+  <div class="toc">
+    <a href="#bmw">BMW</a><a href="#mercedes">Mercedes-Benz</a><a href="#vw">Volkswagen</a><a href="#audi">Audi</a><a href="#peugeot">Peugeot</a><a href="#renault">Renault</a><a href="#volvo">Volvo</a>
+  </div>
 
-  <div class="grp">
-    <h2><i class="ti ti-flag"></i> Europeos</h2>
+  <!-- BMW -->
+  <div class="grp" id="bmw">
+    <h2><i class="ti ti-car"></i> BMW</h2>
+    <p class="lead">Motores turbo de inyección directa (N20/N26 gasolina, N47 diésel). Fallas típicas: cadena de distribución, fugas de aceite y carbonización.</p>
     <div class="cards">
-      <div class="card">
-        <div class="model">Audi A4</div>
-        <div class="engine">Motor 2.0 TFSI</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Fugas de aceite y refrigerante por bridas y juntas</li>
-          <li><i class="ti ti-point"></i>Consumo elevado de aceite</li>
-          <li><i class="ti ti-point"></i>Tensor de la cadena de distribución (traqueteo al arrancar)</li>
-          <li><i class="ti ti-point"></i>Acumulación de sedimentos por aceite vencido</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="model">Volkswagen Golf / Jetta / Tiguan</div>
-        <div class="engine">Motores 1.4 / 2.0 TSI</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Consumo de aceite</li>
-          <li><i class="ti ti-point"></i>Tensor y cadena de distribución</li>
-          <li><i class="ti ti-point"></i>Carbonización en válvulas (inyección directa)</li>
-          <li><i class="ti ti-point"></i>Bobinas de encendido</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="model">BMW Serie 3 / X1</div>
-        <div class="engine">Motores N20 / N47</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Cadena de distribución (versiones diésel N47)</li>
-          <li><i class="ti ti-point"></i>Fugas por junta de tapa de válvulas y cárter</li>
-          <li><i class="ti ti-point"></i>Bomba de agua eléctrica</li>
-          <li><i class="ti ti-point"></i>Sensores y electrónica</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="model">Peugeot / Renault</div>
-        <div class="engine">Motores 1.6 THP / Prince</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Cadena de distribución</li>
-          <li><i class="ti ti-point"></i>Carbonización y consumo de aceite</li>
-          <li><i class="ti ti-point"></i>Fallas electrónicas y de sensores</li>
-        </ul>
-      </div>
+      <div class="card"><div class="model">Serie 1 (F20)</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Cadena de distribución en motores N20</li><li><i class="ti ti-point"></i>Fugas por junta de tapa de válvulas</li><li><i class="ti ti-point"></i>Carbonización en válvulas de admisión</li></ul></div>
+      <div class="card"><div class="model">Serie 2 (F22)</div><div class="yr">2014+</div><ul><li><i class="ti ti-point"></i>Tensor y guías de cadena</li><li><i class="ti ti-point"></i>Bobinas y bujías</li><li><i class="ti ti-point"></i>Fugas en bastidor del filtro de aceite</li></ul></div>
+      <div class="card"><div class="model">Serie 3 (F30)</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Cadena de distribución (N20 pre-2015)</li><li><i class="ti ti-point"></i>Bomba de agua eléctrica</li><li><i class="ti ti-point"></i>Fugas de aceite por juntas</li></ul></div>
+      <div class="card"><div class="model">Serie 4 (F32)</div><div class="yr">2013+</div><ul><li><i class="ti ti-point"></i>Carbonización en admisión</li><li><i class="ti ti-point"></i>Válvula VANOS</li><li><i class="ti ti-point"></i>Fugas por reten y juntas</li></ul></div>
+      <div class="card"><div class="model">Serie 5 (F10 / G30)</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Fugas de aceite y refrigerante</li><li><i class="ti ti-point"></i>Bomba de agua y termostato</li><li><i class="ti ti-point"></i>Desgaste de suspensión</li></ul></div>
+      <div class="card"><div class="model">X1 (E84 / F48)</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Cadena de distribución (N20)</li><li><i class="ti ti-point"></i>Carbonización y consumo de aceite</li><li><i class="ti ti-point"></i>Bobinas de encendido</li></ul></div>
+      <div class="card"><div class="model">X3 (F25 / G01)</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Fugas por junta de cárter y tapa</li><li><i class="ti ti-point"></i>Cadena (diésel N47)</li><li><i class="ti ti-point"></i>EGR y admisión (diésel)</li></ul></div>
+      <div class="card"><div class="model">X4 (F26)</div><div class="yr">2014+</div><ul><li><i class="ti ti-point"></i>Carbonización en válvulas</li><li><i class="ti ti-point"></i>Fugas de aceite</li><li><i class="ti ti-point"></i>Bujes y rótulas de suspensión</li></ul></div>
+      <div class="card"><div class="model">X5 (F15)</div><div class="yr">2013+</div><ul><li><i class="ti ti-point"></i>Fugas de aceite por juntas</li><li><i class="ti ti-point"></i>Inyectores y EGR (diésel)</li><li><i class="ti ti-point"></i>Suspensión neumática</li></ul></div>
+      <div class="card"><div class="model">X6 (F16)</div><div class="yr">2014+</div><ul><li><i class="ti ti-point"></i>Carbonización y consumo de aceite</li><li><i class="ti ti-point"></i>Bomba de agua eléctrica</li><li><i class="ti ti-point"></i>Suspensión y bujes</li></ul></div>
+    </div>
+  </div>
+
+  <!-- MERCEDES -->
+  <div class="grp" id="mercedes">
+    <h2><i class="ti ti-car"></i> Mercedes-Benz</h2>
+    <p class="lead">Motores M274 (2.0 turbo) y OM651 (diésel), cajas 7G/9G-Tronic. Fallas típicas: cadena/tensor, fugas, carbonización y placa conductora de la caja.</p>
+    <div class="cards">
+      <div class="card"><div class="model">Clase A (W176)</div><div class="yr">2013+</div><ul><li><i class="ti ti-point"></i>Estiramiento de cadena de distribución</li><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Carbonización en admisión</li></ul></div>
+      <div class="card"><div class="model">Clase B (W246)</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Cadena y tensor</li><li><i class="ti ti-point"></i>Conductos de ventilación (PCV)</li><li><i class="ti ti-point"></i>Bobinas y sensores</li></ul></div>
+      <div class="card"><div class="model">Clase C (W205)</div><div class="yr">2014+</div><ul><li><i class="ti ti-point"></i>Fugas de aceite por juntas</li><li><i class="ti ti-point"></i>Placa conductora de la caja (7G)</li><li><i class="ti ti-point"></i>Suspensión y bujes</li></ul></div>
+      <div class="card"><div class="model">Clase E (W212 / W213)</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Inyectores y EGR (diésel OM651)</li><li><i class="ti ti-point"></i>Fugas de aceite</li><li><i class="ti ti-point"></i>Suspensión neumática (Airmatic)</li></ul></div>
+      <div class="card"><div class="model">CLA (C117)</div><div class="yr">2013+</div><ul><li><i class="ti ti-point"></i>Cadena de distribución</li><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Embrague de doble disco (caja DCT)</li></ul></div>
+      <div class="card"><div class="model">GLA (X156)</div><div class="yr">2014+</div><ul><li><i class="ti ti-point"></i>Carbonización en válvulas</li><li><i class="ti ti-point"></i>Tensor de cadena</li><li><i class="ti ti-point"></i>Bobinas de encendido</li></ul></div>
+      <div class="card"><div class="model">GLC (X253)</div><div class="yr">2015+</div><ul><li><i class="ti ti-point"></i>Fugas de aceite por juntas</li><li><i class="ti ti-point"></i>Admisión y EGR (diésel)</li><li><i class="ti ti-point"></i>Mantenimiento de caja 9G</li></ul></div>
+      <div class="card"><div class="model">GLE / ML (W166)</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Inyectores y turbo (diésel)</li><li><i class="ti ti-point"></i>Suspensión neumática (Airmatic)</li><li><i class="ti ti-point"></i>Fugas de aceite</li></ul></div>
+      <div class="card"><div class="model">Vito</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Inyectores y EGR (diésel)</li><li><i class="ti ti-point"></i>Turbo y admisión carbonizada</li><li><i class="ti ti-point"></i>Embrague (uso de carga)</li></ul></div>
+      <div class="card"><div class="model">Sprinter</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Inyectores, EGR y turbo (OM651/OM642)</li><li><i class="ti ti-point"></i>Regeneración de DPF</li><li><i class="ti ti-point"></i>Suspensión y frenos (uso intensivo)</li></ul></div>
+    </div>
+  </div>
+
+  <!-- VOLKSWAGEN -->
+  <div class="grp" id="vw">
+    <h2><i class="ti ti-car"></i> Volkswagen</h2>
+    <p class="lead">Motores TSI (1.4 EA211, 2.0 EA888) y cajas DSG. Fallas típicas: consumo de aceite, cadena/tensor, carbonización y mecatrónica de la DSG.</p>
+    <div class="cards">
+      <div class="card"><div class="model">Gol</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Bobinas y sensores</li><li><i class="ti ti-point"></i>Ruido de tensor de accesorios</li><li><i class="ti ti-point"></i>Soportes de motor</li></ul></div>
+      <div class="card"><div class="model">Polo</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (TSI)</li><li><i class="ti ti-point"></i>Carbonización en válvulas</li><li><i class="ti ti-point"></i>Mecatrónica de la caja DSG</li></ul></div>
+      <div class="card"><div class="model">Golf</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Cadena/tensor (EA888) o correa</li><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Embragues y mecatrónica DSG</li></ul></div>
+      <div class="card"><div class="model">Jetta</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (TSI)</li><li><i class="ti ti-point"></i>Bobinas de encendido</li><li><i class="ti ti-point"></i>Termostato y bomba de agua</li></ul></div>
+      <div class="card"><div class="model">Vento</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Carbonización en admisión</li><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Mecatrónica DSG (DQ200)</li></ul></div>
+      <div class="card"><div class="model">Passat</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (EA888)</li><li><i class="ti ti-point"></i>Cadena de distribución</li><li><i class="ti ti-point"></i>Fugas y termostato</li></ul></div>
+      <div class="card"><div class="model">Tiguan</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Cadena/tensor en EA888 gen2</li><li><i class="ti ti-point"></i>Embragues de la DSG</li></ul></div>
+      <div class="card"><div class="model">Amarok</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Inyectores y EGR (2.0 BiTDI)</li><li><i class="ti ti-point"></i>Turbo y admisión carbonizada</li><li><i class="ti ti-point"></i>Embrague (uso de carga)</li></ul></div>
+      <div class="card"><div class="model">T-Cross</div><div class="yr">2019+</div><ul><li><i class="ti ti-point"></i>Carbonización (inyección directa)</li><li><i class="ti ti-point"></i>Bobinas y sensores</li><li><i class="ti ti-point"></i>Mantenimiento de caja automática</li></ul></div>
+      <div class="card"><div class="model">Virtus</div><div class="yr">2018+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (TSI)</li><li><i class="ti ti-point"></i>Carbonización en válvulas</li><li><i class="ti ti-point"></i>Termostato y refrigeración</li></ul></div>
+    </div>
+  </div>
+
+  <!-- AUDI -->
+  <div class="grp" id="audi">
+    <h2><i class="ti ti-car"></i> Audi</h2>
+    <p class="lead">Motores TFSI (1.8 / 2.0 EA888) y cajas S tronic. Fallas típicas: consumo de aceite, cadena de distribución, carbonización y fugas por juntas/bridas.</p>
+    <div class="cards">
+      <div class="card"><div class="model">A1</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (TFSI)</li><li><i class="ti ti-point"></i>Carbonización en válvulas</li><li><i class="ti ti-point"></i>Mecatrónica de la S tronic</li></ul></div>
+      <div class="card"><div class="model">A3</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Cadena/tensor (EA888)</li><li><i class="ti ti-point"></i>Consumo de aceite por segmentos</li><li><i class="ti ti-point"></i>Bobinas de encendido</li></ul></div>
+      <div class="card"><div class="model">A4</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Fugas de aceite y refrigerante por bridas</li><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Tensor de cadena de distribución</li></ul></div>
+      <div class="card"><div class="model">A5</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Carbonización en admisión</li><li><i class="ti ti-point"></i>Fugas por juntas</li><li><i class="ti ti-point"></i>Embragues de la S tronic</li></ul></div>
+      <div class="card"><div class="model">A6</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Fugas de aceite</li><li><i class="ti ti-point"></i>Suspensión y bujes</li></ul></div>
+      <div class="card"><div class="model">Q2</div><div class="yr">2017+</div><ul><li><i class="ti ti-point"></i>Carbonización (inyección directa)</li><li><i class="ti ti-point"></i>Bobinas y sensores</li><li><i class="ti ti-point"></i>Mantenimiento de la S tronic</li></ul></div>
+      <div class="card"><div class="model">Q3</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Cadena/tensor</li><li><i class="ti ti-point"></i>Carbonización en válvulas</li></ul></div>
+      <div class="card"><div class="model">Q5</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (TFSI)</li><li><i class="ti ti-point"></i>Fugas por juntas y bridas</li><li><i class="ti ti-point"></i>Suspensión</li></ul></div>
+      <div class="card"><div class="model">Q7</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Inyectores y EGR (diésel)</li><li><i class="ti ti-point"></i>Suspensión neumática</li><li><i class="ti ti-point"></i>Fugas de aceite</li></ul></div>
+      <div class="card"><div class="model">TT</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Carbonización en admisión</li><li><i class="ti ti-point"></i>Embragues de la S tronic</li></ul></div>
+    </div>
+  </div>
+
+  <!-- PEUGEOT -->
+  <div class="grp" id="peugeot">
+    <h2><i class="ti ti-car"></i> Peugeot</h2>
+    <p class="lead">Motores 1.6 THP (gasolina) y 1.6 HDi (diésel). Fallas típicas: cadena de distribución, carbonización, turbo y sistema FAP/DPF.</p>
+    <div class="cards">
+      <div class="card"><div class="model">207 Compact</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Soportes de motor</li><li><i class="ti ti-point"></i>Sensores y bobinas</li><li><i class="ti ti-point"></i>Ruidos de suspensión</li></ul></div>
+      <div class="card"><div class="model">208</div><div class="yr">2013+</div><ul><li><i class="ti ti-point"></i>Cadena de distribución (1.6 THP)</li><li><i class="ti ti-point"></i>Carbonización en válvulas</li><li><i class="ti ti-point"></i>Termostato y refrigeración</li></ul></div>
+      <div class="card"><div class="model">301</div><div class="yr">2013+</div><ul><li><i class="ti ti-point"></i>Bobinas y sensores</li><li><i class="ti ti-point"></i>Soportes de motor</li><li><i class="ti ti-point"></i>Suspensión y bujes</li></ul></div>
+      <div class="card"><div class="model">308</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Cadena de distribución (THP)</li><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Turbo y carbonización</li></ul></div>
+      <div class="card"><div class="model">2008</div><div class="yr">2014+</div><ul><li><i class="ti ti-point"></i>Cadena y tensor (THP)</li><li><i class="ti ti-point"></i>Carbonización en admisión</li><li><i class="ti ti-point"></i>Termostato</li></ul></div>
+      <div class="card"><div class="model">3008</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Turbo y EGR (HDi diésel)</li><li><i class="ti ti-point"></i>FAP/DPF (diésel)</li><li><i class="ti ti-point"></i>Cadena (THP gasolina)</li></ul></div>
+      <div class="card"><div class="model">408</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Soportes y suspensión</li><li><i class="ti ti-point"></i>Bobinas y sensores</li><li><i class="ti ti-point"></i>Carbonización (THP)</li></ul></div>
+      <div class="card"><div class="model">508</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Turbo e inyectores (HDi)</li><li><i class="ti ti-point"></i>FAP/DPF y EGR</li><li><i class="ti ti-point"></i>Consumo de aceite (THP)</li></ul></div>
+      <div class="card"><div class="model">5008</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Cadena de distribución (THP)</li><li><i class="ti ti-point"></i>EGR y FAP (diésel)</li><li><i class="ti ti-point"></i>Suspensión (carga familiar)</li></ul></div>
+      <div class="card"><div class="model">Partner</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Turbo, EGR e inyectores (HDi)</li><li><i class="ti ti-point"></i>Embrague (uso de carga)</li><li><i class="ti ti-point"></i>Suspensión y frenos</li></ul></div>
+    </div>
+  </div>
+
+  <!-- RENAULT -->
+  <div class="grp" id="renault">
+    <h2><i class="ti ti-car"></i> Renault</h2>
+    <p class="lead">Motores 1.6 (K4M / SCe) gasolina y 1.5 dCi diésel. Fallas típicas: bobinas y sensores, distribución, suspensión y, en diésel, inyectores y turbo.</p>
+    <div class="cards">
+      <div class="card"><div class="model">Logan</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Bobinas y sensores</li><li><i class="ti ti-point"></i>Ruido de distribución (correa/cadena)</li><li><i class="ti ti-point"></i>Suspensión y bujes</li></ul></div>
+      <div class="card"><div class="model">Sandero</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Sensores y check engine</li><li><i class="ti ti-point"></i>Soportes de motor</li><li><i class="ti ti-point"></i>Bujes y amortiguadores</li></ul></div>
+      <div class="card"><div class="model">Stepway</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Suspensión (uso en terreno)</li><li><i class="ti ti-point"></i>Bobinas y bujías</li><li><i class="ti ti-point"></i>Tablero y electrónica</li></ul></div>
+      <div class="card"><div class="model">Duster</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (2.0)</li><li><i class="ti ti-point"></i>Rótulas, bujes y rodajes</li><li><i class="ti ti-point"></i>Inyectores y turbo (dCi diésel)</li></ul></div>
+      <div class="card"><div class="model">Oroch</div><div class="yr">2018+</div><ul><li><i class="ti ti-point"></i>Suspensión (uso de carga)</li><li><i class="ti ti-point"></i>Sensores y bobinas</li><li><i class="ti ti-point"></i>Embrague</li></ul></div>
+      <div class="card"><div class="model">Kwid</div><div class="yr">2018+</div><ul><li><i class="ti ti-point"></i>Sensores y testigos del tablero</li><li><i class="ti ti-point"></i>Suspensión y rodajes</li><li><i class="ti ti-point"></i>Embrague y caja</li></ul></div>
+      <div class="card"><div class="model">Captur</div><div class="yr">2017+</div><ul><li><i class="ti ti-point"></i>Mantenimiento de caja CVT</li><li><i class="ti ti-point"></i>Bobinas y carbonización (turbo)</li><li><i class="ti ti-point"></i>Suspensión</li></ul></div>
+      <div class="card"><div class="model">Koleos</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Caja CVT (cuidado del aceite)</li><li><i class="ti ti-point"></i>Inyectores y turbo (dCi)</li><li><i class="ti ti-point"></i>Suspensión y bujes</li></ul></div>
+      <div class="card"><div class="model">Fluence</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Bobinas y sensores</li><li><i class="ti ti-point"></i>Caja CVT</li><li><i class="ti ti-point"></i>Suspensión y soportes</li></ul></div>
+      <div class="card"><div class="model">Mégane</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Electrónica y sensores</li><li><i class="ti ti-point"></i>Inyectores y turbo (dCi)</li><li><i class="ti ti-point"></i>Suspensión y bujes</li></ul></div>
+    </div>
+  </div>
+
+  <!-- VOLVO -->
+  <div class="grp" id="volvo">
+    <h2><i class="ti ti-car"></i> Volvo</h2>
+    <p class="lead">Motores Drive-E 2.0 (T4/T5 gasolina, D4 diésel) y cajas Geartronic. Fallas típicas: consumo de aceite, cadena/tensor, turbo y, en diésel, inyectores y EGR.</p>
+    <div class="cards">
+      <div class="card"><div class="model">V40</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Tensor de cadena</li><li><i class="ti ti-point"></i>Conductos de ventilación (PCV)</li></ul></div>
+      <div class="card"><div class="model">S60</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (Drive-E)</li><li><i class="ti ti-point"></i>Turbo y carbonización</li><li><i class="ti ti-point"></i>Mantenimiento de caja Geartronic</li></ul></div>
+      <div class="card"><div class="model">V60</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Inyectores y EGR (diésel D4)</li><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Suspensión y bujes</li></ul></div>
+      <div class="card"><div class="model">S80</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Fugas de aceite</li><li><i class="ti ti-point"></i>Turbo (diésel)</li><li><i class="ti ti-point"></i>Suspensión</li></ul></div>
+      <div class="card"><div class="model">XC40</div><div class="yr">2018+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (T4/T5)</li><li><i class="ti ti-point"></i>Carbonización en admisión</li><li><i class="ti ti-point"></i>Mantenimiento de caja</li></ul></div>
+      <div class="card"><div class="model">XC60</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Tensor de cadena</li><li><i class="ti ti-point"></i>Inyectores y EGR (diésel)</li></ul></div>
+      <div class="card"><div class="model">XC70</div><div class="yr">2012+</div><ul><li><i class="ti ti-point"></i>Turbo e inyectores (diésel)</li><li><i class="ti ti-point"></i>Fugas de aceite</li><li><i class="ti ti-point"></i>Suspensión (uso mixto)</li></ul></div>
+      <div class="card"><div class="model">XC90</div><div class="yr">2015+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite (Drive-E)</li><li><i class="ti ti-point"></i>Suspensión neumática</li><li><i class="ti ti-point"></i>Carbonización y PCV</li></ul></div>
+      <div class="card"><div class="model">S90</div><div class="yr">2016+</div><ul><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Turbo y refrigeración</li><li><i class="ti ti-point"></i>Mantenimiento de caja</li></ul></div>
+      <div class="card"><div class="model">V90</div><div class="yr">2016+</div><ul><li><i class="ti ti-point"></i>Inyectores y EGR (diésel)</li><li><i class="ti ti-point"></i>Consumo de aceite</li><li><i class="ti ti-point"></i>Suspensión y bujes</li></ul></div>
     </div>
   </div>
 
   <div class="grp">
-    <h2><i class="ti ti-flag"></i> Japoneses</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="model">Nissan Sentra / X-Trail / Versa</div>
-        <div class="engine">Transmisión CVT</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Recalentamiento de la caja CVT en trayectos largos o subidas</li>
-          <li><i class="ti ti-point"></i>Pérdida de fuerza y tirones</li>
-          <li><i class="ti ti-point"></i>Necesita cambio de aceite y filtros de CVT a tiempo</li>
-          <li><i class="ti ti-point"></i>En casos severos, instalación de enfriador adicional</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="model">Toyota Hilux</div>
-        <div class="engine">Motores diésel</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Inyectores y válvula EGR</li>
-          <li><i class="ti ti-point"></i>Turbo y sistema de admisión</li>
-          <li><i class="ti ti-point"></i>Importante respetar el aceite y los filtros correctos</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="model">Honda Civic / CR-V</div>
-        <div class="engine">Motores 1.5 Turbo</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Dilución de aceite con combustible en algunos casos</li>
-          <li><i class="ti ti-point"></i>Compresor y sistema de aire acondicionado</li>
-          <li><i class="ti ti-point"></i>Bobinas y bujías</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="model">Mazda SkyActiv</div>
-        <div class="engine">Gasolina y diésel</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Carbonización en la admisión</li>
-          <li><i class="ti ti-point"></i>Válvula EGR (versiones diésel)</li>
-          <li><i class="ti ti-point"></i>Mantenimiento de inyectores</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="grp">
-    <h2><i class="ti ti-flag"></i> Coreanos</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="model">Hyundai Tucson / Sonata · Kia Sportage</div>
-        <div class="engine">Motores Theta II 2.0 / 2.4 GDI</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Consumo elevado de aceite</li>
-          <li><i class="ti ti-point"></i>Desgaste de cojinetes de biela (ruido de golpeteo)</li>
-          <li><i class="ti ti-point"></i>Bobinas de encendido</li>
-          <li><i class="ti ti-point"></i>Se recomienda cambio de aceite más frecuente</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="model">Hyundai Accent · Kia Rio</div>
-        <div class="engine">Motores Gamma</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Consumo de aceite (humo azul al acelerar)</li>
-          <li><i class="ti ti-point"></i>Bobinas y sensores</li>
-          <li><i class="ti ti-point"></i>Ruido de cadena de distribución</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="grp">
-    <h2><i class="ti ti-flag"></i> Chinos</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="model">Chery · BYD · MG · Geely · JAC · DFSK</div>
-        <div class="engine">Modelos recientes</div>
-        <ul>
-          <li><i class="ti ti-point"></i>Fallas de sensores y componentes electrónicos</li>
-          <li><i class="ti ti-point"></i>Desgaste temprano de suspensión y frenos</li>
-          <li><i class="ti ti-point"></i>Disponibilidad de repuestos específicos</li>
-          <li><i class="ti ti-point"></i>Ajustes y actualizaciones de fábrica</li>
-        </ul>
-      </div>
-    </div>
+    <h2><i class="ti ti-clock"></i> Próximamente</h2>
+    <div class="soon">Estamos preparando el detalle por modelo de las marcas <strong>japonesas</strong> (Toyota, Honda, Nissan, Mitsubishi, Mazda, Subaru, Suzuki), <strong>coreanas</strong> (Hyundai, Kia, SsangYong) y <strong>chinas</strong> (Chery, BYD, MG, Geely, JAC, DFSK). ¿Tu vehículo es de una de estas marcas? Escríbenos y te asesoramos directamente.</div>
   </div>
 </div>
 
 <div class="cta">
   <div class="wrap">
-    <h2>¿Tu vehículo presenta alguna de estas fallas?</h2>
-    <p>Escríbenos el modelo y el síntoma, y te ayudamos a diagnosticarlo</p>
+    <h2>¿Reconoces alguna de estas fallas en tu vehículo?</h2>
+    <p>Escríbenos el modelo, el año y el síntoma. Te ayudamos a diagnosticarlo.</p>
     <a class="btn-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz,%20mi%20vehículo%20presenta%20una%20falla%20y%20quiero%20una%20revisión" target="_blank"><i class="ti ti-brand-whatsapp"></i> Consultar por WhatsApp</a>
   </div>
 </div>
 
-<p class="disc wrap">Nota: esta información es referencial y se basa en fallas frecuentes reportadas para estos modelos. Cada vehículo es distinto; el diagnóstico definitivo se realiza en el taller con escáner e inspección directa.</p>
+<p class="disc wrap">Nota: esta información es referencial y se basa en fallas frecuentes reportadas para estos modelos (2012 en adelante). No todas las unidades presentan estos problemas. El diagnóstico definitivo se realiza en el taller con escáner e inspección directa.</p>
 
 <footer>
   <div class="wrap">© 2026 ARL Automotriz · Jr Doña Delmira 280, Lima, Perú · 997 470 074</div>
