@@ -97,6 +97,8 @@
   .chip:hover { border-color: var(--navy); }
   .chip img { max-height: 30px; max-width: 76px; filter: grayscale(1); opacity: 0.55; transition: opacity .2s, transform .2s; }
   .chip:hover img { opacity: 1; transform: scale(1.08); }
+  .chip.color img { filter: none; opacity: 1; max-height: 40px; max-width: 88px; }
+  .chip.color:hover img { transform: scale(1.08); }
   .chip span { font-size: 14px; font-weight: 600; color: #555; }
 
   /* ABOUT */
@@ -245,11 +247,11 @@
   <div class="sec-head"><h2>Marcas que atendemos</h2><p>Especialistas en vehículos europeos, japoneses, coreanos y chinos</p></div>
 
   <div class="brand-group"><h4>Europeos</h4><div class="logo-wall">
-    <div class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/bmw.svg" alt="BMW" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">BMW</span></div>
-    <div class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/mercedes.svg" alt="Mercedes-Benz" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">Mercedes</span></div>
-    <div class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/volkswagen.svg" alt="Volkswagen" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">VW</span></div>
-    <div class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/audi.svg" alt="Audi" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">Audi</span></div>
-    <div class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/peugeot.svg" alt="Peugeot" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">Peugeot</span></div>
+    <div class="chip color"><img src="bmw.png" alt="BMW" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">BMW</span></div>
+    <div class="chip color"><img src="mercedes.png" alt="Mercedes-Benz" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">Mercedes</span></div>
+    <div class="chip color"><img src="volkswagen.png" alt="Volkswagen" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">VW</span></div>
+    <div class="chip color"><img src="audi.png" alt="Audi" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">Audi</span></div>
+    <div class="chip color"><img src="peugeot.png" alt="Peugeot" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">Peugeot</span></div>
     <div class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/renault.svg" alt="Renault" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">Renault</span></div>
     <div class="chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/volvo.svg" alt="Volvo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span style="display:none">Volvo</span></div>
   </div></div>
