@@ -95,8 +95,8 @@
   .logo-wall { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; }
   .chip { background: #fff; border: 1px solid var(--line); border-radius: 12px; height: 66px; display: flex; align-items: center; justify-content: center; padding: 0 14px; transition: border-color .2s; }
   .chip:hover { border-color: var(--navy); }
-  .chip img { max-height: 30px; max-width: 76px; filter: grayscale(1); opacity: 0.55; transition: opacity .2s; }
-  .chip:hover img { opacity: 0.9; }
+  .chip img { max-height: 30px; max-width: 76px; filter: grayscale(1); opacity: 0.55; transition: opacity .2s, filter .2s; }
+  .chip:hover img { opacity: 1; filter: grayscale(0); }
   .chip span { font-size: 14px; font-weight: 600; color: #555; }
 
   /* ABOUT */
@@ -134,6 +134,23 @@
   .ci strong { display: block; font-size: 15px; font-weight: 600; }
   .ci span, .ci a { font-size: 15px; color: var(--muted); }
 
+  /* COTIZACION */
+  .quote { background: var(--surface); }
+  .quote-form { max-width: 640px; margin: 0 auto; display: grid; gap: 14px; }
+  .quote-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .quote-form label { font-size: 13px; font-weight: 600; color: var(--ink); display: block; margin-bottom: 5px; }
+  .quote-form input, .quote-form select, .quote-form textarea { width: 100%; padding: 11px 13px; border: 1px solid var(--line); border-radius: 10px; font-size: 15px; font-family: inherit; background: #fff; }
+  .quote-form input:focus, .quote-form select:focus, .quote-form textarea:focus { outline: none; border-color: var(--blue); }
+  .quote-form textarea { min-height: 90px; resize: vertical; }
+  .quote-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+  .quote-actions button { flex: 1; min-width: 180px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 20px; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; }
+  .qb-wa { background: var(--wa); color: #fff; }
+  .qb-mail { background: var(--navy); color: #fff; }
+  .quote-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 4px; }
+  @media (max-width: 560px) { .quote-form .row { grid-template-columns: 1fr; } }
+
+  .marcas-cta { text-align: center; margin-top: 24px; }
+
   /* FOOTER */
   footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 34px 0; text-align: center; font-size: 13px; }
 
@@ -147,11 +164,12 @@
   <div class="wrap nav">
     <a href="#"><img class="logo" src="logo-web.png" alt="ARL Automotriz"></a>
     <nav class="nav-links">
-      <a href="#promo">Promoción</a>
       <a href="#servicios">Servicios</a>
       <a href="#marcas">Marcas</a>
+      <a href="repuestos.html">Repuestos</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#opiniones">Opiniones</a>
+      <a href="#cotizacion">Cotización</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
@@ -260,6 +278,7 @@
     <div class="chip"><span style="display:inline">JAC</span></div>
     <div class="chip"><span style="display:inline">DFSK</span></div>
   </div></div>
+  <div class="marcas-cta"><a class="btn-ghost" href="problemas.html"><i class="ti ti-alert-triangle"></i> Ver problemas comunes por marca</a></div>
 </div></section>
 
 <!-- NOSOTROS -->
@@ -330,6 +349,47 @@
   </div>
 </div></section>
 
+<!-- COTIZACION -->
+<section class="block quote" id="cotizacion"><div class="wrap">
+  <div class="sec-head"><h2>Solicita tu cotización</h2><p>Cuéntanos qué necesita tu vehículo y te respondemos rápido</p></div>
+  <form class="quote-form" id="quoteForm" onsubmit="return false;">
+    <div class="row">
+      <div><label for="q-nombre">Nombre</label><input id="q-nombre" type="text" placeholder="Tu nombre" required></div>
+      <div><label for="q-tel">Teléfono</label><input id="q-tel" type="tel" placeholder="Ej. 999 888 777"></div>
+    </div>
+    <div class="row">
+      <div><label for="q-vehiculo">Vehículo</label><input id="q-vehiculo" type="text" placeholder="Marca, modelo y año"></div>
+      <div><label for="q-servicio">Servicio</label>
+        <select id="q-servicio">
+          <option>Mantenimiento preventivo y correctivo</option>
+          <option>Reparación de motor</option>
+          <option>Frenos</option>
+          <option>Suspensión y dirección</option>
+          <option>Embrague y transmisión</option>
+          <option>Sistema de refrigeración</option>
+          <option>Afinamiento electrónico</option>
+          <option>Sistema eléctrico y electrónico</option>
+          <option>Cambio de baterías</option>
+          <option>Alternadores y arrancadores</option>
+          <option>Correas y tensores</option>
+          <option>Fugas / retenes y empaques</option>
+          <option>Escaneo de códigos de falla</option>
+          <option>Aire acondicionado</option>
+          <option>Inspección precompra</option>
+          <option>Repuestos y consumibles</option>
+          <option>Otro</option>
+        </select>
+      </div>
+    </div>
+    <div><label for="q-msg">Mensaje</label><textarea id="q-msg" placeholder="Describe el problema o lo que necesitas"></textarea></div>
+    <div class="quote-actions">
+      <button type="button" class="qb-wa" onclick="enviarCotizacion('wa')"><i class="ti ti-brand-whatsapp"></i> Enviar por WhatsApp</button>
+      <button type="button" class="qb-mail" onclick="enviarCotizacion('mail')"><i class="ti ti-mail"></i> Enviar por correo</button>
+    </div>
+    <p class="quote-note">Elige el medio que prefieras. Te responderemos lo antes posible.</p>
+  </form>
+</div></section>
+
 <!-- CONTACTO -->
 <section class="block" id="contacto"><div class="wrap">
   <div class="sec-head"><h2>Encuéntranos</h2><p>Visítanos o escríbenos</p></div>
@@ -377,6 +437,26 @@
     if (dx < -40) { go(i+1); reset(); } else if (dx > 40) { go(i-1); reset(); } }, {passive:true});
   go(0); reset();
 })();
+
+function enviarCotizacion(medio){
+  var v = function(id){ return (document.getElementById(id).value || '').trim(); };
+  var nombre = v('q-nombre');
+  if (!nombre) { alert('Por favor escribe tu nombre.'); document.getElementById('q-nombre').focus(); return; }
+  var tel = v('q-tel'), vehiculo = v('q-vehiculo'), servicio = v('q-servicio'), msg = v('q-msg');
+  var cuerpo =
+    'Hola ARL Automotriz, quiero una cotización.\n\n' +
+    'Nombre: ' + nombre + '\n' +
+    (tel ? 'Teléfono: ' + tel + '\n' : '') +
+    (vehiculo ? 'Vehículo: ' + vehiculo + '\n' : '') +
+    'Servicio: ' + servicio + '\n' +
+    (msg ? 'Mensaje: ' + msg + '\n' : '');
+  if (medio === 'wa') {
+    window.open('https://wa.me/51997470074?text=' + encodeURIComponent(cuerpo), '_blank');
+  } else {
+    var asunto = 'Cotización - ' + servicio + ' (' + nombre + ')';
+    window.location.href = 'mailto:servicecarhouse@gmail.com?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo);
+  }
+}
 </script>
 
 </body>
