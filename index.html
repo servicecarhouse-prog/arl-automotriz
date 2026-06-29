@@ -95,8 +95,8 @@
   .logo-wall { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; }
   .chip { background: #fff; border: 1px solid var(--line); border-radius: 12px; height: 66px; display: flex; align-items: center; justify-content: center; padding: 0 14px; transition: border-color .2s; }
   .chip:hover { border-color: var(--navy); }
-  .chip img { max-height: 30px; max-width: 76px; filter: grayscale(1); opacity: 0.55; transition: opacity .2s, filter .2s; }
-  .chip:hover img { opacity: 1; filter: grayscale(0); }
+  .chip img { max-height: 30px; max-width: 76px; filter: grayscale(1); opacity: 0.55; transition: opacity .2s, transform .2s; }
+  .chip:hover img { opacity: 1; transform: scale(1.08); }
   .chip span { font-size: 14px; font-weight: 600; color: #555; }
 
   /* ABOUT */
