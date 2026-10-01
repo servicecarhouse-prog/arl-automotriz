@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<script src="ads.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARL Automotriz — Taller mecánico en Lima | Jr Doña Delmira 280</title>
 <meta name="description" content="Taller automotriz en Lima, Perú. Mantenimiento y reparación de vehículos europeos, japoneses, coreanos y chinos. Cambio de aceite, diagnóstico, frenos y más.">
@@ -445,6 +446,7 @@ function enviarCotizacion(medio){
   var nombre = v('q-nombre');
   if (!nombre) { alert('Por favor escribe tu nombre.'); document.getElementById('q-nombre').focus(); return; }
   var tel = v('q-tel'), vehiculo = v('q-vehiculo'), servicio = v('q-servicio'), msg = v('q-msg');
+  if (window.arlConversion) arlConversion('cotizacion');
   var cuerpo =
     'Hola ARL Automotriz, quiero una cotización.\n\n' +
     'Nombre: ' + nombre + '\n' +
