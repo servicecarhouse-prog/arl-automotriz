@@ -1,4 +1,4 @@
-// Medición de Google Ads (etiqueta AW + conversiones). Se carga en todas las páginas.
+// Medición de Google Ads (etiqueta AW + conversiones) y Microsoft Clarity. Se carga en todas las páginas.
 // Para activar una conversión, pega su etiqueta (lo que va después de "AW-.../") en CONVERSIONES.
 (function(){
   var AW_ID = 'AW-17524585022';
@@ -18,10 +18,18 @@
   gtag('js', new Date());
   gtag('config', AW_ID);
 
+  // Microsoft Clarity: grabaciones y mapas de calor (proyecto "ARL Automotriz web")
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "z0d20n041y");
+
   window.arlConversion = function(tipo){
     var label = CONVERSIONES[tipo];
     if (!label) return;
     gtag('event', 'conversion', { send_to: AW_ID + '/' + label, transport_type: 'beacon' });
+    clarity('event', tipo); // para filtrar en Clarity las visitas que sí escribieron o llamaron
   };
 
   document.addEventListener('click', function(e){
