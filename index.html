@@ -365,43 +365,45 @@
   <div class="sec-head"><h2>Opiniones en Google</h2><p>Lo que dicen nuestros clientes</p></div>
   <div class="rev-top">
     <span class="score">5,0</span>
-    <div><div class="stars">★★★★★</div><div class="sub"><i class="ti ti-brand-google"></i> Reseñas verificadas de Google</div></div>
+    <div><div class="stars">★★★★★</div><div class="sub"><i class="ti ti-brand-google"></i> 11 reseñas en Google, todas de 5 estrellas</div></div>
   </div>
+  <!-- Las 6 más recientes de Google (orden "Más recientes"). data-fecha = día aproximado de la reseña;
+       el script muestra "hace X" como Google, así la fecha no queda vieja. -->
   <div class="reviews">
     <div class="rev">
       <div class="stars">★★★★★</div>
-      <p>"Buen servicio, confianza y garantía de trabajo. Terminan los trabajos a tiempo. Recomendado."</p>
-      <div class="who"><div class="av">CM</div><div><div class="nm">Carlos Mori Ojeda</div><div class="dt">Google · hace 4 semanas</div></div></div>
+      <p>"Muy buena atención, llevé mi BMW para mantenimiento preventivo y todo quedó perfecto. ¡Recomendado!"</p>
+      <div class="who"><div class="av">IN</div><div><div class="nm">Ivan Navarro Castillo</div><div class="dt" data-fecha="2026-10-19">Google · octubre 2026</div></div></div>
     </div>
     <div class="rev">
       <div class="stars">★★★★★</div>
-      <p>"Muy buen servicio, responsables y justos en el precio. Así mismo te envían videos de los trabajos y cambios que se realizan."</p>
-      <div class="who"><div class="av">AS</div><div><div class="nm">Alexandr Sanchez Bravo</div><div class="dt">Google · hace 16 semanas</div></div></div>
-    </div>
-    <div class="rev">
-      <div class="stars">★★★★★</div>
-      <p>"Excelente servicio, muy satisfecho con las reparaciones que se le hicieron a mi vehículo. Te explican todo a detalle, muy atentos, buenos precios y buena calidad de los repuestos. ¡Lo recomiendo!"</p>
-      <div class="who"><div class="av">FG</div><div><div class="nm">Frangy Eduardo Gomez</div><div class="dt">Local Guide · hace 26 semanas</div></div></div>
-    </div>
-    <div class="rev">
-      <div class="stars">★★★★★</div>
-      <p>"Le hice mantenimiento a mi camioneta Suzuki Grand Nomade. Excelente servicio, responsabilidad con garantía. Recomendado al 100%."</p>
-      <div class="who"><div class="av">SR</div><div><div class="nm">Sheyla Reategui</div><div class="dt">Google · hace 28 semanas</div></div></div>
-    </div>
-    <div class="rev">
-      <div class="stars">★★★★★</div>
-      <p>"Realicé el mantenimiento preventivo de mi BMW X1, lo hicieron bien la verdad. ¡100% recomendado! Eso sí, trabajan a través de citas, pero su trabajo es A1."</p>
-      <div class="who"><div class="av">AV</div><div><div class="nm">Andress</div><div class="dt">Google · hace 34 semanas</div></div></div>
+      <p>"Me atendieron rápido y revisaron y cambiaron los repuestos."</p>
+      <div class="who"><div class="av">JP</div><div><div class="nm">Johnny Andres Paredes Biffi</div><div class="dt" data-fecha="2026-10-15" data-pre="Local Guide">Local Guide · octubre 2026</div></div></div>
     </div>
     <div class="rev">
       <div class="stars">★★★★★</div>
       <p>"Taller recomendado, tenía un problema de encendido, realizaron un buen trabajo, no presenté más el problema."</p>
-      <div class="who"><div class="av">BC</div><div><div class="nm">Brisa L. Conislla</div><div class="dt">Google · hace 34 semanas</div></div></div>
+      <div class="who"><div class="av">BC</div><div><div class="nm">Brisa L. Conislla</div><div class="dt" data-fecha="2026-10-15">Google · octubre 2026</div></div></div>
+    </div>
+    <div class="rev">
+      <div class="stars">★★★★★</div>
+      <p>"El Sr. Andrés tuvo un trato amable, se hizo un buen trabajo. Se agradece mucho el detalle de compartir todo el trabajo realizado y cada cosa que se ha revisado. Muy confiable, recomendado."</p>
+      <div class="who"><div class="av">LS</div><div><div class="nm">Luis Sáez Galindo</div><div class="dt" data-fecha="2026-09-28">Google · septiembre 2026</div></div></div>
+    </div>
+    <div class="rev">
+      <div class="stars">★★★★★</div>
+      <p>"Saben lo que hacen, precio justo y puntuales."</p>
+      <div class="who"><div class="av">JO</div><div><div class="nm">J &amp; Open Service E.I.R.L.</div><div class="dt" data-fecha="2026-06-19" data-pre="Local Guide">Local Guide · junio 2026</div></div></div>
+    </div>
+    <div class="rev">
+      <div class="stars">★★★★★</div>
+      <p>"Buen servicio, confianza y garantía de trabajo. Terminan los trabajos a tiempo. Recomendado."</p>
+      <div class="who"><div class="av">CM</div><div><div class="nm">Carlos Mori Ojeda</div><div class="dt" data-fecha="2026-05-19">Google · mayo 2026</div></div></div>
     </div>
   </div>
   <div class="swipe-hint">Desliza para ver más opiniones <i class="ti ti-arrow-right"></i></div>
   <div class="rev-cta">
-    <a class="btn-ghost" href="https://www.google.com/maps/search/ARL+Automotriz" target="_blank"><i class="ti ti-brand-google"></i> Ver todas las reseñas en Google</a>
+    <a class="btn-ghost" href="https://maps.google.com/?cid=67732178974395445" target="_blank"><i class="ti ti-brand-google"></i> Ver todas las reseñas en Google</a>
   </div>
 </div></section>
 
@@ -587,6 +589,21 @@
     : 'Cerrado · abre mañana 8am';
   el.classList.toggle('open', abierto);
   el.lastChild.textContent = texto;
+})();
+
+// Fecha de cada opinión como la muestra Google ("hace 3 semanas"), calculada desde data-fecha
+(function(){
+  function hace(n, uno, varios){ return 'hace ' + n + ' ' + (n === 1 ? uno : varios); }
+  document.querySelectorAll('.rev .dt[data-fecha]').forEach(function(el){
+    var dias = Math.floor((Date.now() - new Date(el.getAttribute('data-fecha') + 'T12:00:00-05:00')) / 86400000);
+    if (isNaN(dias) || dias < 0) return;
+    var txt = dias < 1 ? 'hoy'
+      : dias < 7 ? hace(dias, 'día', 'días')
+      : dias < 30 ? hace(Math.floor(dias / 7), 'semana', 'semanas')
+      : dias < 365 ? hace(Math.floor(dias / 30), 'mes', 'meses')
+      : hace(Math.floor(dias / 365), 'año', 'años');
+    el.textContent = (el.getAttribute('data-pre') || 'Google') + ' · ' + txt;
+  });
 })();
 
 // Servicios en celular: se muestran 8 y el resto con el botón
