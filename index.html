@@ -308,7 +308,7 @@
     <p>Mantenimiento, frenos, embrague, suspensión, motor y aire acondicionado para todas las marcas. Te enviamos video de cada trabajo.</p>
     <div class="loc"><i class="ti ti-map-pin"></i> Jr Doña Delmira 280 · Surco, Lima</div>
     <div class="cta-group">
-      <a class="btn btn-wa big" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz%2C%20quiero%20cotizar.%0AMi%20auto%20es%20(marca%2C%20modelo%20y%20a%C3%B1o)%3A%20%0ANecesito%3A%20" target="_blank"><i class="ti ti-brand-whatsapp"></i> Cotiza por WhatsApp</a>
+      <a class="btn btn-wa big" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank"><i class="ti ti-brand-whatsapp"></i> Cotiza por WhatsApp</a>
       <a class="btn btn-call" href="tel:+51997470074"><i class="ti ti-phone"></i> Llamar ahora</a>
     </div>
   </div>
@@ -330,7 +330,7 @@
   <div class="promo-price">
     <div class="from">Precio según tu auto</div>
     <div class="amt txt">Cotiza gratis</div>
-    <a class="btn" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz%2C%20quiero%20cotizar%20el%20mantenimiento%20preventivo.%0AMi%20auto%20es%20(marca%2C%20modelo%20y%20a%C3%B1o)%3A%20" target="_blank"><i class="ti ti-brand-whatsapp"></i> Cotizar por WhatsApp</a>
+    <a class="btn" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz%2C%20quiero%20cotizar%20el%20mantenimiento%20preventivo" target="_blank"><i class="ti ti-brand-whatsapp"></i> Cotizar por WhatsApp</a>
   </div>
 </div></div>
 
@@ -536,12 +536,12 @@
   <div class="wrap">© 2026 ARL Automotriz · Jr. Doña Delmira 280, Santiago de Surco, Lima · 997 470 074</div>
 </footer>
 
-<a class="float-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz%2C%20quiero%20cotizar.%0AMi%20auto%20es%20(marca%2C%20modelo%20y%20a%C3%B1o)%3A%20%0ANecesito%3A%20" target="_blank" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+<a class="float-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
 
 <!-- Barra fija de contacto en celular: aparece cuando los botones de la portada ya no se ven -->
 <div class="mbar hide" id="mbar">
   <a class="m-call" href="tel:+51997470074"><i class="ti ti-phone"></i> Llamar</a>
-  <a class="m-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz%2C%20quiero%20cotizar.%0AMi%20auto%20es%20(marca%2C%20modelo%20y%20a%C3%B1o)%3A%20%0ANecesito%3A%20" target="_blank"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>
+  <a class="m-wa" href="https://wa.me/51997470074?text=Hola%20ARL%20Automotriz%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>
 </div>
 
 <script>
@@ -637,7 +637,7 @@ function enviarCotizacion(medio){
   var tel = v('q-tel'), vehiculo = v('q-vehiculo'), servicio = v('q-servicio'), msg = v('q-msg');
   if (window.arlConversion) arlConversion('cotizacion');
   var cuerpo =
-    'Hola ARL Automotriz, quiero una cotización.\n\n' +
+    'Hola ARL Automotriz, ' + (window.arlDeAnuncio ? 'vi su anuncio en Google, ' : '') + 'quiero una cotización.\n\n' +
     'Nombre: ' + nombre + '\n' +
     (tel ? 'Teléfono: ' + tel + '\n' : '') +
     (vehiculo ? 'Vehículo: ' + vehiculo + '\n' : '') +

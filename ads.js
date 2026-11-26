@@ -32,11 +32,27 @@
     clarity('event', tipo); // para filtrar en Clarity las visitas que sí escribieron o llamaron
   };
 
+  // ¿La visita llegó desde un anuncio de Google? (Google agrega gclid/gbraid/wbraid a la dirección)
+  var deAnuncio = false;
+  try {
+    if (/[?&](gclid|gbraid|wbraid)=/.test(location.search)) sessionStorage.setItem('arl_ads', '1');
+    deAnuncio = sessionStorage.getItem('arl_ads') === '1';
+  } catch (err) {
+    deAnuncio = /[?&](gclid|gbraid|wbraid)=/.test(location.search);
+  }
+  window.arlDeAnuncio = deAnuncio;
+
   document.addEventListener('click', function(e){
     var a = e.target.closest && e.target.closest('a[href]');
     if (!a) return;
     var href = a.getAttribute('href');
-    if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(href)) arlConversion('whatsapp');
+    if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(href)) {
+      // Así Andrés reconoce en WhatsApp quién viene de la publicidad
+      if (deAnuncio && href.indexOf('vi%20su%20anuncio') === -1) {
+        a.setAttribute('href', href.replace(/text=Hola%20ARL%20Automotriz(%2C|,)/, 'text=Hola%20ARL%20Automotriz%2C%20vi%20su%20anuncio%20en%20Google%2C'));
+      }
+      arlConversion('whatsapp');
+    }
     else if (/^tel:/.test(href)) arlConversion('llamada');
   }, true);
 })();
